@@ -687,11 +687,12 @@ textarea {
   border-color: white;
 
   border-style: solid;
-
+  color: white;
   border: 0;
   outline: 0;
   border-bottom: 1px solid white;
   background: none;
+  margin: 10px;
 }
 
 .notes-form textarea {
@@ -702,6 +703,7 @@ textarea {
   outline: 0;
   border-bottom: 1px solid white;
   background: none;
+  color: white;
 }
 
 .all-notes-container {
@@ -774,16 +776,15 @@ button {
   margin: 5px;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: #0053ba;
 }
 
-button:focus {
+/* button:focus {
   outline: 1px solid #fff;
   outline-offset: -4px;
-}
+} */
 
-button:active {
+button:focus {
   transform: scale(0.99);
 }

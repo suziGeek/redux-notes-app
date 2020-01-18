@@ -18,12 +18,11 @@ class NotesForm extends Component {
   };
 
   handleSubmission = e => {
-    e.preventDefault();
-
     let { title, content } = this.state;
     this.props.addNote(title, content);
 
     this.setState({ title: "", content: "" });
+    e.preventDefault();
   };
 
   render() {
@@ -32,7 +31,7 @@ class NotesForm extends Component {
         <div className='notes-form'>
           <h3>Add a Note</h3>
 
-          <form onSubmit={this.handleSubmission}>
+          <form autocomplete='off' onSubmit={this.handleSubmission}>
             Title: <br />
             <input
               type='text'
