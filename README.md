@@ -1,2 +1,2 @@
-# redux-notse-app
+# redux-notes-app
 A react Notes app utilizing redux state management and react router.
