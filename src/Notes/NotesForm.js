@@ -29,9 +29,9 @@ class NotesForm extends Component {
     return (
       <React.Fragment>
         <div className='notes-form'>
-          <h3>Add a Note</h3>
+          <p id='add-note'>Add a Note</p>
 
-          <form autocomplete='off' onSubmit={this.handleSubmission}>
+          <form autoComplete='off' onSubmit={this.handleSubmission}>
             Title: <br />
             <input
               type='text'
