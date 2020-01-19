@@ -645,6 +645,10 @@ textarea {
     url(/images/pic01.jpg);
   background-size: cover;
 }
+
+#link {
+  color: white;
+}
 #things {
   flex-grow: 1;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addNote } from "../redux/actions/actions";
+import { Link } from "react-router-dom";
 
 class NotesForm extends Component {
   constructor(props) {
@@ -28,27 +29,28 @@ class NotesForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className='notes-form'>
-          <p id='add-note'>Add a Note</p>
+        <div className='notes-form-container'>
+          <div className='notes-form'>
+            <p id='add-note'>Add a Note</p>
 
-          <form autoComplete='off' onSubmit={this.handleSubmission}>
-            Title: <br />
-            <input
-              type='text'
-              name='title'
-              value={this.state.title}
-              onChange={this.handleChange}
-            />
-            <br />
-            Content: <br />
-            <textarea
-              name='content'
-              value={this.state.content}
-              onChange={this.handleChange}
-            ></textarea>
-            <br />
-            <button type='submit'>Add Note</button>
-          </form>
+            <form autoComplete='off' onSubmit={this.handleSubmission}>
+              Title: <br />
+              <input
+                type='text'
+                name='title'
+                value={this.state.title}
+                onChange={this.handleChange}
+              />
+              <br />
+              Content: <br />
+              <textarea
+                name='content'
+                value={this.state.content}
+                onChange={this.handleChange}
+              ></textarea>
+              <br /> <button type='submit'>Add Note</button>
+            </form>
+          </div>
         </div>
       </React.Fragment>
     );

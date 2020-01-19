@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { removeNote } from "../redux/actions/actions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class AllNotes extends Component {
   removeNote = index => {
@@ -27,10 +28,17 @@ class AllNotes extends Component {
 
     return (
       <React.Fragment>
-        <div className='all-notes'>
-          <p>Tasks</p>
-
-          {notesItems}
+        <div className='all-notes-container'>
+          <div className='all-notes'>
+            <p>Tasks</p>
+            {notesItems}
+            <div className='add-task'>
+              <Link to='/NotesForm'>
+                {" "}
+                <FontAwesomeIcon icon='plus-circle' />
+              </Link>
+            </div>
+          </div>
         </div>
       </React.Fragment>
     );
