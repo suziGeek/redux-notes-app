@@ -15,12 +15,12 @@ class AllNotes extends Component {
           <b>{note.title}</b>
         </div>
         <div className='button-div'>
-          <p id='note-content'>{note.content}</p>
+          <div id='note-content'>{note.content}</div>
 
-          <p id='note-button'>
+          <div id='note-button'>
             {" "}
             <button onClick={() => this.removeNote(index)}>X</button>
-          </p>
+          </div>
         </div>
       </div>
     ));
